@@ -12,7 +12,7 @@
 6. https://github.com/bhavul/Caltech-101-Object-Classification cnn inspired/copied
 ## Instruction
 ### CNN Method
-Just copy the .ipynb file to Jupyter Notebook or Google Colab and run from there
+Just download the CNN.ipynb file to Jupyter Notebook or Google Colab and run from there
 ### LSH Method
 1. `git clone` this repo
 2. `cd lsh`
