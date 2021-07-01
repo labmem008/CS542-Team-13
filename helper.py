@@ -31,6 +31,6 @@ def images_per_class(path):
 	return dict
 
 # Testing......
-# pprint.pprint(images_per_class('./data'))
-# print(len(images_per_class('./data')))
+pprint.pprint(images_per_class('./data'))
+print(len(images_per_class('./data')))
 

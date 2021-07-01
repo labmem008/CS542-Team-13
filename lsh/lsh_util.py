@@ -21,6 +21,7 @@ def image_to_vector(image: numpy.ndarray) -> numpy.ndarray:
 #     return vectors
 def load_images_from_folder(folder):
     vectors = []
+    classes = []
     for sub_folder in os.listdir(folder):
         for files in os.listdir(folder+'/'+sub_folder):
             image = cv2.imread(str(folder+sub_folder+'/'+files))
@@ -28,11 +29,12 @@ def load_images_from_folder(folder):
                 image_resized = cv2.resize(image, dsize=(image_size, image_size))
                 vector = image_to_vector(image_resized)
                 vectors.append(vector.T)
-    return vectors
+                classes.append(str(sub_folder))
+    return vectors, classes
 path = r'../data/'
-vectors = load_images_from_folder(path)
+vectors,classes = load_images_from_folder(path)
 num_tables = 3
-hash_size = 30
+hash_size = 50
 inp_dimensions = image_dimension
 start_time = time.time()
 project = lsh.LSH(num_tables, hash_size, inp_dimensions)
@@ -63,6 +65,8 @@ query_vector = vectors[query_numer]
 
 s = "The image ID that we want to search is query image " + str(query_numer)
 print(s)
+s = "The type of the query image is " + str(classes[query_numer])
+print(s)
 result = project.__getitem__(query_vector)
 print("The image IDs that are similar to the query image are:")
 print(result)
@@ -81,6 +85,8 @@ for index in result:
 end_time = time.time()
 s = "The ID of the nearest neighbor of the query image is " + str(min_index) + " of distance "\
 + str(min_dist)
+print(s)
+s = "The type of this nearest image is " + str(classes[min_index])
 print(s)
 s = "Time spent: " + str(end_time - start_time)
 print(s)
