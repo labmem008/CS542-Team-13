@@ -10,3 +10,10 @@
 4. http://www.vision.caltech.edu/Image_Datasets/Caltech101/ image database
 5. https://stackoverflow.com/questions/48121916/numpy-resize-rescale-image cv2 resize
 6. https://github.com/bhavul/Caltech-101-Object-Classification cnn inspired/copied
+## Instruction
+### CNN Method
+Just copy the .ipynb file to Jupyter Notebook or Google Colab and run from there.
+### LSH Method
+1. `git clone` this repo
+2. `cd lsh`
+3. run `python lsh_util.py` inside a venv and see the output
