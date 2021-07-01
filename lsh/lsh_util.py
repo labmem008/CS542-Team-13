@@ -10,16 +10,26 @@ image_dimension = image_size * image_size * 3
 def image_to_vector(image: numpy.ndarray) -> numpy.ndarray:
     length, height, depth = image.shape
     return image.reshape((length * height * depth, 1))
+# def load_images_from_folder(folder):
+#     vectors = []
+#     for files in os.listdir(folder):
+#         image = cv2.imread(os.path.join(folder,files))
+#         if image is not None:
+#         	image_resized = cv2.resize(image, dsize=(image_size, image_size))
+#         	vector = image_to_vector(image_resized)
+#         	vectors.append(vector.T)
+#     return vectors
 def load_images_from_folder(folder):
     vectors = []
-    for files in os.listdir(folder):
-        image = cv2.imread(os.path.join(folder,files))
-        if image is not None:
-        	image_resized = cv2.resize(image, dsize=(image_size, image_size))
-        	vector = image_to_vector(image_resized)
-        	vectors.append(vector.T)
+    for sub_folder in os.listdir(folder):
+        for files in os.listdir(folder+'/'+sub_folder):
+            image = cv2.imread(str(folder+sub_folder+'/'+files))
+            if image is not None:
+                image_resized = cv2.resize(image, dsize=(image_size, image_size))
+                vector = image_to_vector(image_resized)
+                vectors.append(vector.T)
     return vectors
-path = r'../data/Faces'
+path = r'../data/'
 vectors = load_images_from_folder(path)
 num_tables = 4
 hash_size = 10
