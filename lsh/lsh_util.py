@@ -31,8 +31,8 @@ def load_images_from_folder(folder):
     return vectors
 path = r'../data/'
 vectors = load_images_from_folder(path)
-num_tables = 4
-hash_size = 10
+num_tables = 3
+hash_size = 30
 inp_dimensions = image_dimension
 start_time = time.time()
 project = lsh.LSH(num_tables, hash_size, inp_dimensions)
