@@ -19,7 +19,7 @@ def load_images_from_folder(folder):
         	vector = image_to_vector(image_resized)
         	vectors.append(vector.T)
     return vectors
-path = r'../data/set1/'
+path = r'../data/Faces'
 vectors = load_images_from_folder(path)
 num_tables = 4
 hash_size = 10
