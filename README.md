@@ -9,3 +9,4 @@
 3. https://docs.python.org/3/tutorial/venv.html venv
 4. http://www.vision.caltech.edu/Image_Datasets/Caltech101/ image database
 5. https://stackoverflow.com/questions/48121916/numpy-resize-rescale-image cv2 resize
+6. https://github.com/bhavul/Caltech-101-Object-Classification cnn inspired/copied
