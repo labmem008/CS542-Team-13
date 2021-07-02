@@ -85,8 +85,8 @@ for index in result:
 end_time = time.time()
 s = "The ID of the nearest neighbor of the query image is " + str(min_index) + " of distance "\
 + str(min_dist)
-print(s)
-s = "The type of this nearest image is " + str(classes[min_index])
+# print(s)
+s = "The type of the nearest image is " + str(classes[min_index])
 print(s)
 s = "Time spent: " + str(end_time - start_time)
 print(s)
