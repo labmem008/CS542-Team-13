@@ -8,7 +8,7 @@
 ### CNN Method
 1. download CNN.ipynb
 2. open `CNN.ipynb` with Jupyter Notebook or other Notebook environment. Note: Google Colab might not work due to memory limitation, local environment is recommended.
-3. run all code in notebook.
+3. run each code block from start.
 ### Nearest Neighbor LSH Method
 1. `git clone` this repo
 2. `cd lsh`
