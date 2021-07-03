@@ -3,7 +3,7 @@
 1. The `lsh` folder contains source codes for LSH approach
 2. `CNN.ipynb` is the source code for CNN approach
 3. `README.md`(this file) contains compile instruction and citations
-4. TODO: paper.pdf
+4. `Report.pdf` is our report.
 ## Compile Instruction
 ### CNN Method
 Just open `CNN.ipynb` with Google Colab or Jupyter Notebook
