@@ -1,9 +1,11 @@
 # CS542-Team-13
-## Folders
+## Folders and Files
 1. The `lsh` folder contains source codes for LSH approach
 2. `CNN.ipynb` is the source code for CNN approach
 3. `README.md`(this file) contains compile instruction and citations
-4. `Report.pdf` is our report.
+4. `Report.pdf` is the project report.
+5. `Project PPT.pdf` is our presentation powerpoint in pdf format. 
+6. `Project PPT.pptx` is our presentation powerpoint in powerpoint format.
 ## Compile Instruction
 ### CNN Method
 1. download CNN.ipynb
